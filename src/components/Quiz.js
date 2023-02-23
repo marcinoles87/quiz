@@ -1,10 +1,20 @@
 
 import React from 'react'
 
+import Question from './question.js'
+
+import './quiz.css'
+
  function Quiz() {
 
   return (
-    <div>Quiz</div>
+    <div className='quiz-wrapper'>
+
+        <div className='quiz-head'>
+            <Question></Question>
+
+        </div>
+    </div>
   )
 }
 
