@@ -1,16 +1,28 @@
 [
     {
         "question" : "kto jest najlepszy w gry" ,
-        "answear" : "marcel"
+        "answear" : {
+            "ans1" : "marcel",
+            "ans2" : "kuba" ,
+            "ans3" : "zuzia" 
+         }
     },
 
     {
         "question" : "kto jest najlepszy w skladanie konstrukcji" ,
-        "answear" : "kuba"
+        "answear" : {
+            "ans1" : "marcel",
+            "ans2" : "kuba" ,
+            "ans3" : "zuzia" 
+         }
     },
 
     {
         "question" : "kto jest najlepszy w puzle" ,
-        "answear" : "zuzia"
+        "answear" : {
+            "ans1" : "marcel",
+            "ans2" : "kuba" ,
+            "ans3" : "zuzia" 
+         }
     }
 ]
