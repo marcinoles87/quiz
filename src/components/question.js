@@ -9,10 +9,10 @@ import './question.css'
 
  
 
-  const handleOnClick = (e) =>{
+  const handleOnClick = () =>{
     
     
-    let x =Math.floor(Math.random()*100)
+    let x =Math.floor(Math.random()*10)
     setRandom(x)
   }
   
