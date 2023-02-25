@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import Question from './question.js'
+import Question from './question'
 
 import './quiz.css'
 

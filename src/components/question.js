@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import JSONDATA from './JSONDATA.json'
 
 import './question.css'
 
-export default function question() {
+ function Question() {
+
+  const [random,setRandom] = useState();
   return (
     <div>
       <h1> Pytanie : </h1>
@@ -22,3 +24,5 @@ export default function question() {
     </div>
   )
 }
+
+export default Question
