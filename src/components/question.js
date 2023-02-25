@@ -5,16 +5,17 @@ import './question.css'
 
  function Question() {
 
-  let [random,setRandom] = useState(0);
+  let [random,setRandom] = useState();
 
- const  handleOnClick = () => {
+ 
 
-  setRandom = () => {
-    random = Math.random(1)*10
-
-    console.log(random)
-
-  }}
+  const handleOnClick = (e) =>{
+    
+    
+    let x =Math.floor(Math.random()*100)
+    setRandom(x)
+  }
+  
   return (
     <div>
       <h1> Pytanie : </h1>
@@ -23,7 +24,7 @@ import './question.css'
       {JSONDATA.map((item) => {
         return(
 
-        <div key={item.index}>
+        <div >
           <h2>{item.question}</h2>
           <p>{item.answear.ans1}</p>
           <p>{item.answear.ans2}</p>
