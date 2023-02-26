@@ -24,7 +24,8 @@ import './question.css'
       {JSONDATA.map((item) => {
 
        
-        let y = Math.floor(Math.random()*3)
+        let y = Math.floor(Math.random()*10)
+        
         return(
 
         <div >
