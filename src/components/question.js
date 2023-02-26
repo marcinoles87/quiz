@@ -7,12 +7,12 @@ import './question.css'
 
   let [random,setRandom] = useState();
 
- 
+  
 
   const handleOnClick = () =>{
     
-    
-    let x =Math.floor(Math.random()*10)
+    let x =Math.floor(Math.random()*3) 
+   
     setRandom(x)
   }
   
@@ -22,6 +22,9 @@ import './question.css'
       <button className='next' onClick={handleOnClick}>Next</button>
       
       {JSONDATA.map((item) => {
+
+       
+        let y = Math.floor(Math.random()*3)
         return(
 
         <div >
@@ -33,6 +36,7 @@ import './question.css'
           
         </div>)
       })}
+      
     </div>
   )
 }
