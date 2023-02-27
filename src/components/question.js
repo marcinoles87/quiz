@@ -53,17 +53,18 @@ const quest = [
   return (
     <div>
       <h1> Pytanie : {quest[0].question} </h1>
-      <p>{quest.map((answear) => {
-        <>
-          <p>{answear.ans1}</p>
-          <p>{answear.ans2}</p>
-          <p>{answear.ans3}</p>
-          </>
+      <p>{quest.map((item) => {
+        return(
+          <div>
+            <p>{item.answear.ans1}</p>
+            
+            </div>
+        )
       })}</p>
       <button className='next' onClick={handleOnClick}>Next</button>
 
 
-      {quest[0].answear.ans1}
+     
       
       {/* {JSONDATA.map((item) => {
 
