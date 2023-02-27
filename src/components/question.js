@@ -38,17 +38,22 @@ const quest = [
   
   return (
     <div>
-      <h1> Pytanie : {quest[0].question} </h1>
+      <h1> Pytanie  {quest.length} / {quest.length}</h1>
+      <h2> {quest[0].question}</h2>
+      
       <p>{quest[0].answear.map((answe) => {
         return(
+
+          <div className='answear'>
         <button>{answe.answearOption}</button>
+        </div>
         )
         
 
       })}</p>
 
 
-      <button className='next' onClick={handleOnClick}>Next</button>
+     
 
 
      

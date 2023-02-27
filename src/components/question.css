@@ -7,9 +7,9 @@ h2{
     text-align: center;
 }
 
-p{
-    text-align: center;
-    border: 2px solid green;
-    background-color: white;
-    color: black;
+
+
+.answear {
+    background-color: rgb(14, 14, 64);
+    color:white;
 }
