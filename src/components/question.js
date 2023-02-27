@@ -14,9 +14,10 @@ const quest = [
         question : "kto jest najlepszy w gry" ,
 
         answear : [
-           {ans : "marcel"},
-           {ans : "zuzia"},
-           {ans : "kuba"},
+           {answearOption : "marcel" , correct : "true"},
+           {answearOption : "susa" , correct : "false"},
+           {answearOption : "kuga" , correct : "false"},
+         
             
                   ]
     },
@@ -39,7 +40,10 @@ const quest = [
     <div>
       <h1> Pytanie : {quest[0].question} </h1>
       <p>{quest[0].answear.map((answe) => {
-        <button>{answe.ans}</button>
+        return(
+        <button>{answe.answearOption}</button>
+        )
+        
 
       })}</p>
 
