@@ -11,31 +11,16 @@ import './question.css'
 
 const quest = [
     {
-        "question" : "kto jest najlepszy w gry" ,
-        "answear" : {
-            "ans1" : "marcel",
-            "ans2" : "kuba" ,
-            "ans3" : "zuzia" 
-         }
+        question : "kto jest najlepszy w gry" ,
+
+        answear : [
+           {ans : "marcel"},
+           {ans : "zuzia"},
+           {ans : "kuba"},
+            
+                  ]
     },
 
-    {
-        "question" : "kto jest najlepszy w skladanie konstrukcji" ,
-        "answear" : {
-            "ans1" : "marcel",
-            "ans2" : "kuba" ,
-            "ans3" : "zuzia" 
-         }
-    },
-
-    {
-        "question" : "kto jest najlepszy w puzle" ,
-        "answear" : {
-            "ans1" : "marcel",
-            "ans2" : "kuba" ,
-            "ans3" : "zuzia" 
-         }
-    }
 ]
   
 
@@ -53,14 +38,12 @@ const quest = [
   return (
     <div>
       <h1> Pytanie : {quest[0].question} </h1>
-      <p>{quest.map((item) => {
-        return(
-          <div>
-            <p>{item.answear.ans1}</p>
-            
-            </div>
-        )
+      <p>{quest[0].answear.map((answe) => {
+        <button>{answe.ans}</button>
+
       })}</p>
+
+
       <button className='next' onClick={handleOnClick}>Next</button>
 
 

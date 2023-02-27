@@ -11,7 +11,7 @@ import './quiz.css'
     <div className='quiz-wrapper'>
 
         <div className='quiz-head'>
-            <Question></Question>
+            <Question ></Question>
 
         </div>
     </div>
