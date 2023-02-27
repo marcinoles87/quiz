@@ -49,7 +49,7 @@ const quest = [
 ]
   
 
-  let [random,setRandom] = useState();
+  let [currentQuestion , setCurrentQuestion] = useState(0);
 
   
 
@@ -57,24 +57,27 @@ const quest = [
     
     let x =Math.floor(Math.random()*3) 
    
-    setRandom(x)
+    setCurrentQuestion(x)
   }
   
   return (
     <div>
       <h1> Pytanie  {quest.length} / {quest.length}</h1>
-      <h2> {quest[0].question}</h2>
+      <h2> {quest[currentQuestion].question}</h2>
 
       <p>{quest[0].answear.map((answe) => {
+
         return(
 
           <div className='answear'>
-        <button>{answe.answearOption}</button>
+              <button>{answe.answearOption}</button>
         </div>
         )
         
 
       })}</p>
+
+      <button onClick={handleOnClick}>Chosse Question</button>
 
 
      
