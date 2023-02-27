@@ -3,7 +3,41 @@ import JSONDATA from './JSONDATA.json'
 
 import './question.css'
 
+
+
+
  function Question() {
+
+
+const quest = [
+    {
+        "question" : "kto jest najlepszy w gry" ,
+        "answear" : {
+            "ans1" : "marcel",
+            "ans2" : "kuba" ,
+            "ans3" : "zuzia" 
+         }
+    },
+
+    {
+        "question" : "kto jest najlepszy w skladanie konstrukcji" ,
+        "answear" : {
+            "ans1" : "marcel",
+            "ans2" : "kuba" ,
+            "ans3" : "zuzia" 
+         }
+    },
+
+    {
+        "question" : "kto jest najlepszy w puzle" ,
+        "answear" : {
+            "ans1" : "marcel",
+            "ans2" : "kuba" ,
+            "ans3" : "zuzia" 
+         }
+    }
+]
+  
 
   let [random,setRandom] = useState();
 
@@ -18,10 +52,20 @@ import './question.css'
   
   return (
     <div>
-      <h1> Pytanie : </h1>
+      <h1> Pytanie : {quest[0].question} </h1>
+      <p>{quest.map((answear) => {
+        <>
+          <p>{answear.ans1}</p>
+          <p>{answear.ans2}</p>
+          <p>{answear.ans3}</p>
+          </>
+      })}</p>
       <button className='next' onClick={handleOnClick}>Next</button>
+
+
+      {quest[0].answear.ans1}
       
-      {JSONDATA.map((item) => {
+      {/* {JSONDATA.map((item) => {
 
        
         let y = Math.floor(Math.random()*10)
@@ -36,7 +80,9 @@ import './question.css'
           {random}
           
         </div>)
-      })}
+      })} */}
+
+      
       
     </div>
   )
