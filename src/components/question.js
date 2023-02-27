@@ -62,10 +62,10 @@ const quest = [
   
   return (
     <div>
-      <h1> Pytanie  {quest.length} / {quest.length}</h1>
+      <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
       <h2> {quest[currentQuestion].question}</h2>
 
-      <p>{quest[0].answear.map((answe) => {
+      {quest[0].answear.map((answe) => {
 
         return(
 
@@ -75,7 +75,7 @@ const quest = [
         )
         
 
-      })}</p>
+      })}
 
       <button onClick={handleOnClick}>Chosse Question</button>
 

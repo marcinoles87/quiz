@@ -19,6 +19,12 @@ h2{
     border-radius: 20px;
 }
 
+.answear:hover{
+    background-color: rgb(26, 26, 85);
+
+
+}
+
 button{
     margin: 10px;
     background-color: rgb(14, 14, 64);
@@ -31,4 +37,6 @@ button{
 
 button:hover{
     font-size:25px;
+    background-color: rgb(26, 26, 85);
+
 }
