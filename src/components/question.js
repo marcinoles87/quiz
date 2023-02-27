@@ -22,6 +22,30 @@ const quest = [
                   ]
     },
 
+    {
+      question : "kto jest najlepszy w lego" ,
+
+      answear : [
+         {answearOption : "marcel" , correct : "false"},
+         {answearOption : "susa" , correct : "false"},
+         {answearOption : "kuga" , correct : "true"},
+       
+          
+                ]
+  },
+
+  {
+    question : "kto jest najlepszy w puzzle" ,
+
+    answear : [
+       {answearOption : "marcel" , correct : "false"},
+       {answearOption : "susa" , correct : "true"},
+       {answearOption : "kuga" , correct : "false"},
+     
+        
+              ]
+},
+
 ]
   
 
@@ -40,7 +64,7 @@ const quest = [
     <div>
       <h1> Pytanie  {quest.length} / {quest.length}</h1>
       <h2> {quest[0].question}</h2>
-      
+
       <p>{quest[0].answear.map((answe) => {
         return(
 
