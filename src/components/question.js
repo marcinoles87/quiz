@@ -50,6 +50,7 @@ const quest = [
   
 
   let [currentQuestion , setCurrentQuestion] = useState(0);
+  let [point, setCurrentPoint] = useState(0)
 
   
 
@@ -58,19 +59,26 @@ const quest = [
     let x =Math.floor(Math.random()*3) 
    
     setCurrentQuestion(x)
+
   }
+
+ const handlePoint = () => {
+  
+ }
+
   
   return (
     <div>
       <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
       <h2> {quest[currentQuestion].question}</h2>
+      <p > Punkty : {point}</p>
 
       {quest[0].answear.map((answe) => {
 
         return(
 
           <div className='answear'>
-              <button>{answe.answearOption}</button>
+              <button onClick={handlePoint}>{answe.answearOption}</button>
         </div>
         )
         
