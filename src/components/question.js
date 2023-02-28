@@ -63,7 +63,12 @@ const quest = [
   }
 
  const handlePoint = () => {
+  console.log('dziala')
   
+
+  setCurrentPoint(point++)
+
+
  }
 
   
