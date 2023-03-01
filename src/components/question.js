@@ -46,6 +46,18 @@ const quest = [
               ]
 },
 
+{
+  question : "kto jest najlepszy w sport" ,
+
+  answear : [
+     {answearOption : "marcel" , correct : false},
+     {answearOption : "tata" , correct : true},
+     {answearOption : "kuga" , correct : false},
+   
+      
+            ]
+},
+
 ]
   
 
@@ -72,8 +84,12 @@ const quest = [
    }
 
    setCurrentQuestion(currentQuestion+1)
+   console.log(quest.length)
+   console.log(currentQuestion)
 
-   
+   if(quest.length <= currentQuestion){
+    alert('end game')
+   }
   
  }
 
