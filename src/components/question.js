@@ -68,16 +68,22 @@ const quest = [
    if(correct === true){
     alert('correct answear')
     setCurrentPoint(point++)
+    
    }
+
+   setCurrentQuestion(currentQuestion+1)
+
+   
   
  }
 
   
   return (
-    <div>
+    <div className='quiz-game'>
+      <div className='question'>
       <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
       <h2> {quest[currentQuestion].question}</h2>
-      <p > Punkty : {point}</p>
+      </div>
 
       {quest[currentQuestion].answear.map((answe) => {
 
@@ -92,6 +98,7 @@ const quest = [
       })}
 
       <button onClick={handleOnClick}>Chosse Question</button>
+      <h1> Your current point is : {point}</h1>
 
 
      
