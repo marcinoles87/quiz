@@ -62,15 +62,17 @@ const quest = [
 
   }
 
- const handlePoint = (e) => {
-  console.log(e.target.value)
+ const handlePoint = (correct) => {
   
   
-  if(e.quest.answear.correct === true){
-  setCurrentPoint(point++)
+   console.log(correct.correct)
+  
+  
+    setCurrentPoint(point++)
+  
 
 
- }}
+ }
 
   
   return (
@@ -84,7 +86,7 @@ const quest = [
         return(
 
           <div className='answear'>
-              <button onClick={handlePoint}>{answe.answearOption}</button>
+              <button onClick={() => handlePoint(answe.correct)}>{answe.answearOption}</button>
         </div>
         )
         
