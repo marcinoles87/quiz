@@ -14,9 +14,9 @@ const quest = [
         question : "kto jest najlepszy w gry" ,
 
         answear : [
-           {answearOption : "marcel" , correct : "true"},
-           {answearOption : "susa" , correct : "false"},
-           {answearOption : "kuga" , correct : "false"},
+           {answearOption : "marcel" , correct : true},
+           {answearOption : "susa" , correct : false},
+           {answearOption : "kuga" , correct : false},
          
             
                   ]
@@ -26,9 +26,9 @@ const quest = [
       question : "kto jest najlepszy w lego" ,
 
       answear : [
-         {answearOption : "marcel" , correct : "false"},
-         {answearOption : "susa" , correct : "false"},
-         {answearOption : "kuga" , correct : "true"},
+         {answearOption : "marcel" , correct : false } ,
+         {answearOption : "susa" , correct : false},
+         {answearOption : "kuga" , correct : true},
        
           
                 ]
@@ -38,9 +38,9 @@ const quest = [
     question : "kto jest najlepszy w puzzle" ,
 
     answear : [
-       {answearOption : "marcel" , correct : "false"},
-       {answearOption : "susa" , correct : "true"},
-       {answearOption : "kuga" , correct : "false"},
+       {answearOption : "marcel" , correct : false},
+       {answearOption : "susa" , correct : true},
+       {answearOption : "kuga" , correct : false},
      
         
               ]
@@ -62,14 +62,15 @@ const quest = [
 
   }
 
- const handlePoint = () => {
-  console.log('dziala')
+ const handlePoint = (e) => {
+  console.log(e.target.value)
   
-
+  
+  if(e.quest.answear.correct === true){
   setCurrentPoint(point++)
 
 
- }
+ }}
 
   
   return (
