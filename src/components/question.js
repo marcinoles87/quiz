@@ -65,13 +65,11 @@ const quest = [
  const handlePoint = (correct) => {
   
   
-   console.log(correct.correct)
-  
-  
+   if(correct === true){
+    alert('correct answear')
     setCurrentPoint(point++)
+   }
   
-
-
  }
 
   
@@ -81,7 +79,7 @@ const quest = [
       <h2> {quest[currentQuestion].question}</h2>
       <p > Punkty : {point}</p>
 
-      {quest[0].answear.map((answe) => {
+      {quest[currentQuestion].answear.map((answe) => {
 
         return(
 
