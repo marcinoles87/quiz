@@ -100,12 +100,15 @@ const quest = [
    }
 
    setCurrentQuestion(currentQuestion+1)
+
+   setShowScore(false)
   
    if(currentQuestion === quest.length-1){
     alert('end game')
+    setShowScore(true)
     setCurrentQuestion(0)
     setCurrentPoint(0)
-    setShowScore(true)
+    
    }
 
   
@@ -117,7 +120,7 @@ const quest = [
   
     <div className='quiz-game'>
 
-      {showScore ? <h1> Your score is {point}/{quest.length} </h1> : <p></p>}
+     
       <div className='question'>
    
       <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
@@ -137,7 +140,7 @@ const quest = [
       })}
 
       <button onClick={handleOnClick}>Chosse Question</button>
-      <h1> Your current point is : {point}</h1>
+      <h1> Your score is {point}/{quest.length} </h1>
 
 
     
