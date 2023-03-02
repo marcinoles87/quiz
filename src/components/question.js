@@ -78,22 +78,22 @@ const quest = [
   
   
    if(correct === true){
-    
+
     alert('correct answear')
-    setCurrentPoint(point++)
+    console.log(point)
+    setCurrentPoint(point ++)
+    console.log(point)
     
    }
 
    setCurrentQuestion(currentQuestion+1)
   
-   if(currentQuestion ===3){
+   if(currentQuestion === quest.length-1){
     alert('end game')
     setCurrentQuestion(0)
    }
 
-   if(quest.length <= currentQuestion){
-    alert('end game')
-   }
+  
   
  }
 
