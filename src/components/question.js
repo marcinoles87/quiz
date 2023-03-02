@@ -40,10 +40,22 @@ const quest = [
     answear : [
        {answearOption : "marcel" , correct : false},
        {answearOption : "susa" , correct : true},
-       {answearOption : "kuga" , correct : false},
+       {answearOption : "kuba" , correct : false},
      
         
               ]
+},
+
+{
+  question : "kto jest najlepszy w strzaly wolnych" ,
+
+  answear : [
+     {answearOption : "marcel" , correct : true},
+     {answearOption : "zuza" , correct : false},
+     {answearOption : "kuba" , correct : false},
+   
+      
+            ]
 },
 
 {
@@ -52,7 +64,7 @@ const quest = [
   answear : [
      {answearOption : "marcel" , correct : false},
      {answearOption : "tata" , correct : true},
-     {answearOption : "kuga" , correct : false},
+     {answearOption : "kuba" , correct : false},
    
       
             ]
@@ -61,8 +73,9 @@ const quest = [
 ]
   
 
-  let [currentQuestion , setCurrentQuestion] = useState(0);
-  let [point, setCurrentPoint] = useState(0)
+  const [currentQuestion , setCurrentQuestion] = useState(0);
+  const [point, setCurrentPoint] = useState(0)
+ 
 
   
 
@@ -81,7 +94,7 @@ const quest = [
 
     alert('correct answear')
     console.log(point)
-    setCurrentPoint(point ++)
+    setCurrentPoint(point +1)
     console.log(point)
     
    }
@@ -91,6 +104,7 @@ const quest = [
    if(currentQuestion === quest.length-1){
     alert('end game')
     setCurrentQuestion(0)
+    setCurrentPoint(0)
    }
 
   
@@ -102,6 +116,7 @@ const quest = [
   
     <div className='quiz-game'>
       <div className='question'>
+   
       <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
       <h2> {quest[currentQuestion].question}</h2>
       </div>
@@ -144,6 +159,7 @@ const quest = [
       
       
     </div>
+ 
   )
 }
 
