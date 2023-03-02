@@ -78,14 +78,18 @@ const quest = [
   
   
    if(correct === true){
+    
     alert('correct answear')
     setCurrentPoint(point++)
     
    }
 
    setCurrentQuestion(currentQuestion+1)
-   console.log(quest.length)
-   console.log(currentQuestion)
+  
+   if(currentQuestion ===3){
+    alert('end game')
+    setCurrentQuestion(0)
+   }
 
    if(quest.length <= currentQuestion){
     alert('end game')
@@ -95,6 +99,7 @@ const quest = [
 
   
   return (
+  
     <div className='quiz-game'>
       <div className='question'>
       <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
@@ -117,10 +122,7 @@ const quest = [
       <h1> Your current point is : {point}</h1>
 
 
-     
-
-
-     
+    
       
       {/* {JSONDATA.map((item) => {
 
