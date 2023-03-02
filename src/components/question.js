@@ -75,6 +75,7 @@ const quest = [
 
   const [currentQuestion , setCurrentQuestion] = useState(0);
   const [point, setCurrentPoint] = useState(0)
+  const [showScore , setShowScore] = useState(false)
  
 
   
@@ -93,9 +94,8 @@ const quest = [
    if(correct === true){
 
     alert('correct answear')
-    console.log(point)
     setCurrentPoint(point +1)
-    console.log(point)
+    
     
    }
 
@@ -105,6 +105,7 @@ const quest = [
     alert('end game')
     setCurrentQuestion(0)
     setCurrentPoint(0)
+    setShowScore(true)
    }
 
   
@@ -115,6 +116,8 @@ const quest = [
   return (
   
     <div className='quiz-game'>
+
+      {showScore ? <h1> Your score is {point}/{quest.length} </h1> : <p></p>}
       <div className='question'>
    
       <h1> Pytanie  {currentQuestion+1} / {quest.length}</h1>
